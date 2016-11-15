@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mm.shoppinglist">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OptionsActivity"
+            android:label="@string/options"
+            />
+        <activity
+            android:name=".ProductListActivity"
+            android:label="@string/products_to_buy"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"/>
+        <activity android:name=".DoneListActivity"
+            android:label="@string/marked_bought"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"/>
+        <activity android:name=".Popup"
+            android:theme="@style/AppTheme.MyCustomTheme"
+            />
+        <activity android:name=".PopupRemove"
+            android:theme="@style/AppTheme.MyCustomTheme"
+            />
+        <activity android:name=".PopupRemoveAll"
+            android:theme="@style/AppTheme.MyCustomTheme"
+            />
+        <activity android:name=".PopupEdit"
+            android:theme="@style/AppTheme.MyCustomTheme"
+            />
+        <provider
+            android:authorities="ShoppingListCP"
+            android:name=".ShoppingListContentProvider"
+            />
+    </application>
+
+</manifest>

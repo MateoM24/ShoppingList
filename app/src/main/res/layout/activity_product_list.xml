@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerLayout"
+    android:background="@color/colorBackground"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:id="@+id/topLayout"
+            android:layout_alignTop="@+id/bottomLayout"
+            android:background="@color/colorPrimary"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bought"
+                android:background="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="1"
+                android:id="@+id/bought"
+                android:onClick="markDone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_done_list"
+                android:background="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="1"
+                android:id="@+id/toDoneList"
+                android:onClick="goToDoneList"
+                />
+        </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/bottomLayout"
+    android:layout_marginTop="80dp"
+    >
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_weight="1"
+        android:drawSelectorOnTop="false"
+        />
+        <TextView android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_margin="30dp"
+            android:padding="30dp"
+            android:text="@string/please_add_something"/>
+
+</LinearLayout>
+</RelativeLayout>
